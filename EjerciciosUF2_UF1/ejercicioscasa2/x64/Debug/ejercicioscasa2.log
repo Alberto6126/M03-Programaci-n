@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\sanch\Desktop\Code\ejercicioscasa2SOL\ejercicioscasa2SOL\ejercicioscasa2\main.cpp(85,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  ejercicioscasa2.vcxproj -> C:\Users\sanch\Desktop\Code\ejercicioscasa2SOL\ejercicioscasa2SOL\x64\Debug\ejercicioscasa2.exe
