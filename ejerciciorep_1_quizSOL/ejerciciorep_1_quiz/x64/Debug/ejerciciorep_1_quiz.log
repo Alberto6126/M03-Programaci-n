@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\AlbertoSanchezPerez\Desktop\M03 Programació\UF1\ejerciciorep_1_quizSOL\ejerciciorep_1_quiz\Source.cpp(23,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\AlbertoSanchezPerez\Desktop\M03 Programació\UF1\ejerciciorep_1_quizSOL\ejerciciorep_1_quiz\Source.cpp(107,6): error C2601: 'main': local function definitions are illegal
+C:\Users\AlbertoSanchezPerez\Desktop\M03 Programació\UF1\ejerciciorep_1_quizSOL\ejerciciorep_1_quiz\Source.cpp(86,38): message : this line contains a '{' which has not yet been matched
+C:\Users\AlbertoSanchezPerez\Desktop\M03 Programació\UF1\ejerciciorep_1_quizSOL\ejerciciorep_1_quiz\Source.cpp(86,38): fatal  error C1075: '{': no matching token found
