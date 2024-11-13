@@ -1,92 +1,123 @@
 #include <iostream>
 #include <windows.h>
 #include <time.h>
-#include<queue>
+#include"tema07_uf1.h";
 
+bool appIsOpened = true;
+short userinput_menu = 0;
 
+int ej1(); 
 
-static void ej1() {
-	std::queue<int> nums;
-	bool userIsInserting = true;
-	int userInput;
-
-	/*1. Crea un programa que pida un número al usuario, el programa almacenará
-	 el número y seguidamente pedirá otro al usuario. Esto debe hacerse
-	 infinitamente hasta que el usuario quiera, entonces el programa finalizará
-	 mostrando todos los números introducidos.*/
-
-
-#pragma region número 
-
-		while (userIsInserting) {
-			system("CLS");
-			std::cout << "introduce un numero: ";
-			std::cin >> userInput;
-			if (userInput == -1) {
-				userIsInserting = false;
-			}
-			if (userInput < -1) {
-				system("CLS");
-				std::cout << "ERROR, NUMEROS NEGATIVOS NO SON SOPORTADOS\n";
-				Sleep(1000);
-			}
-			else if (userInput > -1) {
-			nums.push(userInput);
-			}
-		}
-#pragma endregion
-
-
-#pragma region Impresión de la queue
-		int i = 0;
-		system("CLS");
-		while (nums.empty() == false)
-		{
-			std::cout << "--------------------------------------------------------------------------\n";
-			std::cout << "| Posicion " << i << ":	" << nums.front() << "	| Posicion de memoria asignada:	" << &nums.front() <<"|\n"; 
-			nums.pop();
-			i++; 
-		}
-		std::cout << "--------------------------------------------------------------------------\n";
-
-#pragma endregion
-
-}
-
-static void menu() {
-	short userinput_menu;
-std::cout << "--------------------------------------------------------------------------------------------------------\n";
-std::cout << "--------------------------------------------------------------------------------------------------------\n";
-std::cout<<" 	___                                                                          ___       \n";
-std::cout<<" 	| |.-.   ( __)   .--.    ___ .-.    ___  ___    .--.    ___ .-.   ( __)   .-.| |    .--.   \n";
-std::cout<<" 	| /   \\  ('' )  /    \\  (   )   \\  (   )(   )  /    \\  (   )   \\  ('' )  /   \\ |   /    \\  \n";
-std::cout<<" 	|  .-. |  | |  |  .-. ;  |  .-. .   | |  | |  |  .-. ;  |  .-. .   | |  |  .-. |  |  .-. ; \n";
-std::cout<<" 	| |  | |  | |  |  | | |  | |  | |   | |  | |  |  | | |  | |  | |   | |  | |  | |  | |  | | \n";
-std::cout<<" 	| |  | |  | |  |  |/  |  | |  | |   | |  | |  |  |/  |  | |  | |   | |  | |  | |  | |  | | \n";
-std::cout<<" 	| |  | |  | |  |  ' _.'  | |  | |   | |  | |  |  ' _.'  | |  | |   | |  | |  | |  | |  | | \n";
-std::cout<<" 	| '  | |  | |  |  .'.-.  | |  | |   ' '  ; '  |  .'.-.  | |  | |   | |  | '  | |  | '  | | \n";
-std::cout<<"	' `-' ;   | |  '  `-' /  | |  | |    \\ `' /   '  `-' /  | |  | |   | |  ' `-'  /  '  `-' / \n";
-std::cout<<" 	 `.__.   (___)  `.__.'  (___)(___)    '_.'     `.__.'  (___)(___) (___)  `.__,'    `.__.'  \n";
-std::cout << "--------------------------------------------------------------------------------------------------------\n"; 
-std::cout << "--------------------------------------------------------------------------------------------------------\n";
-
-	std::cin >> userinput_menu;
+int menu_7_uf1() {
+	system("CLS");
+	userinput_menu = 0;
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "  __  __                           _             _ _                       _            \n";
+	std::cout << " |  \\/  |                         (_)           | (_)                     (_)           \n";
+	std::cout << " | \\  / | ___ _ __ ___   ___  _ __ _  __ _    __| |_ _ __   __ _ _ __ ___  _  ___ __ _  \n";
+	std::cout << " | |\\/| |/ _ \\ '_ ` _ \\ / _ \\| '__| |/ _` |  / _` | | '_ \\ / _` | '_ ` _ \\| |/ __/ _` | \n";
+	std::cout << " | |  | |  __/ | | | | | (_) | |  | | (_| | | (_| | | | | | (_| | | | | | | | (_| (_| | \n";
+	std::cout << " |_|  |_|\\___|_| |_| |_|\\___/|_|  |_|\\__,_|  \\__,_|_|_| |_|\\__,_|_| |_| |_|_|\\___\\__,_| \n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "¿QUE PROGRAMA QUIERES INICIAR?\n-1- Ejercicio 1:\n	pide numeros al usuario y los imprime en orden fifo cuando se introduce el -1\n";
+	while (userinput_menu != 1 && userinput_menu != 2) {
+		std::cin >> userinput_menu; 
+	}
 	switch (userinput_menu) {
-	case 1: ej1(); break;
-	
-
-
-
+	case 1:  ej1(); break;
 
 	}
-
+	return 0;
 }
 
-void main() {
-	menu(); 
+int menu_uf2() {
+	system("CLS");
+	userinput_menu = 0;
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "             .-.                 \n";
+	std::cout << "            /    \\               \n";
+	std::cout << " ___  ___   | .`. ;      .--.    \n";
+	std::cout << "(   )(   )  | |(___)    ;  _  \\  \n";
+	std::cout << " | |  | |   | |_       (___)` |  \n";
+	std::cout << " | |  | |  (   __)          ' '  \n";
+	std::cout << " | |  | |   | |            / /   \n";
+	std::cout << " | |  | |   | |           / /    \n";
+	std::cout << " | |  ; '   | |          / /     \n";
+	std::cout << " ' `-'  /   | |         / '____  \n";
+	std::cout << "  '.__.'   (___)       (_______) \n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "¿QUE TEMA QUIERES REVISAR?\n-1- Funciones y Librerias\n";
+	std::cin >> userinput_menu;
 
+	return 0;
+}
 
+int menu_uf1() {
+	system("CLS");
+	userinput_menu = 0;
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "             .-.              \n";
+	std::cout << "            /    \\            \n";
+	std::cout << " ___  ___   | .`. ;     .--.  \n";
+	std::cout << "(   )(   )  | |(___)   (_  |  \n";
+	std::cout << " | |  | |   | |_         | |  \n";
+	std::cout << " | |  | |  (   __)       | |  \n";
+	std::cout << " | |  | |   | |          | |  \n";
+	std::cout << " | |  | |   | |          | |  \n";
+	std::cout << " | |  ; '   | |          | |  \n";
+	std::cout << " ' `-'  /   | |          | |  \n";
+	std::cout << "  '.__.'   (___)        (___) \n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "¿QUE TEMA QUIERES REVISAR?\n-1- Tema 7: Memoria dinamica\n"; 
+	while (userinput_menu != 1 && userinput_menu != 2) {
+		std::cin >> userinput_menu;
+	}
+	switch (userinput_menu) {
+	case 1:  menu_7_uf1(); break;
 
+	}
+	return 0;
+}
 
-} 
+int menu() {
+	system("CLS");
+	userinput_menu = 0;
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << " 	___                                                                          ___       \n";
+	std::cout << " 	| |.-.   ( __)   .--.    ___ .-.    ___  ___    .--.    ___ .-.   ( __)   .-.| |    .--.   \n";
+	std::cout << " 	| /   \\  ('' )  /    \\  (   )   \\  (   )(   )  /    \\  (   )   \\  ('' )  /   \\ |   /    \\  \n";
+	std::cout << " 	|  .-. |  | |  |  .-. ;  |  .-. .   | |  | |  |  .-. ;  |  .-. .   | |  |  .-. |  |  .-. ; \n";
+	std::cout << " 	| |  | |  | |  |  | | |  | |  | |   | |  | |  |  | | |  | |  | |   | |  | |  | |  | |  | | \n";
+	std::cout << " 	| |  | |  | |  |  |/  |  | |  | |   | |  | |  |  |/  |  | |  | |   | |  | |  | |  | |  | | \n";
+	std::cout << " 	| |  | |  | |  |  ' _.'  | |  | |   | |  | |  |  ' _.'  | |  | |   | |  | |  | |  | |  | | \n";
+	std::cout << " 	| '  | |  | |  |  .'.-.  | |  | |   ' '  ; '  |  .'.-.  | |  | |   | |  | '  | |  | '  | | \n";
+	std::cout << "	' `-' ;   | |  '  `-' /  | |  | |    \\ `' /   '  `-' /  | |  | |   | |  ' `-'  /  '  `-' / \n";
+	std::cout << " 	 `.__.   (___)  `.__.'  (___)(___)    '_.'     `.__.'  (___)(___) (___)  `.__,'    `.__.'  \n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "--------------------------------------------------------------------------------------------------------\n";
+	std::cout << "¿QUE UF QUIERES REVISAR?\n-1- UF1: Fundamentos de la programacion en c++\n-2- UF2: Punteros y direcciones de memoria\n";
+	while (userinput_menu != 1 && userinput_menu != 2) {
+		std::cin >> userinput_menu;
+	}
+
+	switch (userinput_menu) {
+	case 1: menu_uf1(); break;
+
+	}
+	return 0;
+}
+
+void main(){
+	while (appIsOpened) {
+		menu(); 
+}
+}
+
 

@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\Users\sanch\Desktop\Code\ejercicioscasa2SOL\ejercicioscasa2SOL\ejercicioscasa2\main.cpp(85,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  ejercicioscasa2.vcxproj -> C:\Users\sanch\Desktop\Code\ejercicioscasa2SOL\ejercicioscasa2SOL\x64\Debug\ejercicioscasa2.exe
+﻿  tema07_uf1.cpp
+  ejercicioscasa2.vcxproj -> C:\Users\AlbertoSanchezPerez\Desktop\M03-Programaci-n\EjerciciosUF2_UF1\x64\Debug\ejercicioscasa2.exe
